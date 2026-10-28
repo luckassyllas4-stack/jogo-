@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#241044"><title>MEGA RASPADINHA</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark">🍀</span><span id="brandName">MEGA RASPADINHA</span></a><div class="top-actions"><button class="ghost" id="shareBtn">↗ Compartilhar</button><a class="ghost" href="/admin.html">Painel admin</a></div></header>
+<main class="container">
+<section class="hero"><div class="hero-copy"><span class="eyebrow">✨ SUA SORTE COMEÇA AQUI</span><h1>Raspe, descubra<br><em>e divirta-se!</em></h1><p id="welcomeText">Uma experiência colorida, simples e divertida.</p><div class="hero-pills"><span>🔒 Ambiente protegido</span><span>🍀 Boa sorte</span></div></div><div class="hero-art"><div class="coin coin-a">★</div><div class="ticket-art"><span>🍀</span><b>RASPE<br> AQUI</b><small>BOA SORTE!</small></div><div class="coin coin-b">✦</div></div></section>
+<section class="section-head"><div><span class="eyebrow">ESCOLHA SUA EXPERIÊNCIA</span><h2>Raspadinhas disponíveis</h2></div><span class="small-muted">Cadastro necessário</span></section>
+<div id="cardsGrid" class="cards-grid"><div class="loading">Carregando raspadinhas…</div></div>
+<section class="trust-row"><div>🍀 <b>Boa experiência</b><span>Interface simples e rápida</span></div><div>📱 <b>Feito para celular</b><span>Jogue também no computador</span></div><div>💬 <b>Precisa de ajuda?</b><span id="supportText">Fale com o suporte</span></div></section>
+<footer>© <span id="year"></span> <span id="footerName">MEGA RASPADINHA</span>. Jogue com responsabilidade. Consulte as regras e a legislação aplicável.</footer>
+</main>
+<div class="modal-backdrop hidden" id="registerModal"><div class="modal"><button class="modal-close" data-close="registerModal">×</button><div class="modal-icon">👋</div><h2>Vamos começar?</h2><p>Faça seu cadastro para continuar.</p><form id="registerForm"><label>Seu nome<input name="name" required minlength="2" placeholder="Como podemos te chamar?"></label><label>Telefone com DDD<input name="phone" required inputmode="tel" placeholder="(11) 99999-9999"></label><button class="primary full" type="submit">Continuar</button><p class="form-note">Seus dados devem ser tratados conforme a política de privacidade do site.</p></form><div id="registerError" class="error"></div></div></div>
+<div class="modal-backdrop hidden" id="paymentModal"><div class="modal"><button class="modal-close" data-close="paymentModal">×</button><div class="modal-icon">💳</div><h2>Finalize seu pedido</h2><p id="paymentMessage">Pague para liberar a raspadinha.</p><div class="price-large" id="paymentPrice">R$ 0,00</div><img id="paymentQr" class="qr hidden" alt="QR Code para pagamento"><a id="paymentLink" class="primary full hidden" target="_blank" rel="noopener">Abrir pagamento seguro</a><div class="status-pill" id="paymentStatus">Aguardando confirmação</div><button id="checkPayment" class="secondary full">Verificar status</button><p class="form-note">A raspadinha só será liberada após a confirmação real do provedor de pagamento.</p><div id="paymentError" class="error"></div></div></div>
+<div class="modal-backdrop hidden" id="scratchModal"><div class="modal scratch-modal"><button class="modal-close" data-close="scratchModal">×</button><div class="modal-icon">🍀</div><h2 id="scratchTitle">Sua raspadinha</h2><p>Arraste o dedo ou o mouse para raspar a área prateada.</p><div class="scratch-stage"><div id="scratchResult" class="scratch-result">Boa sorte!</div><canvas id="scratchCanvas" width="640" height="300" aria-label="Área para raspar"></canvas></div><button class="secondary full" id="revealScratch">Revelar resultado demonstrativo</button><p class="form-note">Resultado de demonstração neste modelo inicial. Não há prêmio real configurado.</p></div></div>
+<div class="toast" id="toast"></div>
+<script src="/app.js"></script>
+</body></html>
